@@ -1,0 +1,117 @@
+body {
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+        .timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: red;
+        }
+        .main-question {
+            display: none;
+            margin-top: 20px;
+        }
+        #question {
+            display:none;
+        }
+        .freeze-screen {
+            pointer-events: none; /* Disable user interaction */
+            opacity: 0.5; /* Dim the screen */
+        }
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            flex-direction: column;
+        }
+
+        /* Custom Alert Modal */
+        #customAlert {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+            display: none;
+            z-index: 9999;
+        }
+
+        #customAlert button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: not-allowed;
+            opacity: 0.5;
+            font-size: 1rem;
+        }
+
+        #customAlert button:disabled {
+            background-color: gray;
+        }
+
+        #editor {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #333;
+            background-color: #222;
+        }
+        
+        #editor1 {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #333;
+            background-color: #222;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between; /* Pushes buttons to opposite sides */
+            padding: 20px;
+        }    
+        button {
+            margin: 10px;
+            padding: 8px 16px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .input-container {
+            margin: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 50px;
+            background-color: #222;
+            color: white;
+            border: 1px solid #444;
+            padding: 5px;
+            font-size: 14px;
+        }
+        #output {
+            margin: 10px;
+            padding: 10px;
+            background-color: #222;
+            color:white;
+            border: 1px solid #444;
+            min-height: 100px;
+            white-space: pre-wrap;
+        }

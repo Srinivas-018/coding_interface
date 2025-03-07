@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE-A-THON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="competitionBody" background="bg.jpg">
+
+<center>
+    <img src="logo.png" alt="CODE-A-THON" width="800">
+    
+    <!-- Timer -->
+    <p class="timer" id="timer">90m 00s</p>
+</center>
+<img src="problem1.png" alt="problem1" height="400px" width="650px">
+<!--<img src="pex1.png" alt="problem1ex" height="180px" width="400px">-->
+<!-- Sub-question (MCQ) -->
+<div id="question">
+    <h2>Which is the only single-digit Smith number?</h2>
+    <button onclick="checkAnswer(6)">6</button>
+    <button onclick="checkAnswer(2)">2</button>
+    <button onclick="checkAnswer(4)">4</button>
+    <button onclick="checkAnswer(9)">9</button>
+</div>
+<!-- Main Question (Revealed on Correct MCQ Answer) -->
+<div class="main-question">
+    <img src="problem2.png" alt="problem2"  height="500px" width="600px">
+    <!--<img src="pex2.png" alt="problem2ex" height="200px" width="300px">  -->
+</div>
+
+<div class="button-container">
+<button onclick="runCode()">Run Code</button>
+<button onclick="showMCQ()" class="b">NEXT</button>
+</div>
+<div id="editor"></div>
+<div class="input-container">
+    <label for="stdin">Input:</label>
+    <textarea id="stdin" placeholder="Enter input values separated by new lines..."></textarea>
+</div>
+
+<div id="output">Output will appear here...</div>
+
+
+<br/><button onclick="submit()">SUBMIT</button>
+
+
+<!-- Custom Alert Modal -->
+<div id="customAlert">
+    <p>⛔ Action blocked for security reasons!</p>
+    <button disabled>Okay</button>
+</div>
+<!-- Overlay for Freezing on Wrong Answer / Submit -->
+<div id="overlay"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
